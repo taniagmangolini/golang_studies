@@ -1,0 +1,23 @@
+# .air.toml
+root = "."
+tmp_dir = "tmp"
+log_level = "debug"
+debug = true
+
+[build]
+  cmd = "go build -o ./tmp/main"
+  bin = "./tmp/main"
+  include_ext = ["go"]
+  exclude_dir = ["tmp", "vendor"]
+  exclude_file = []
+  delay = 200
+  stop_on_error = true
+
+[log]
+  colored = true
+  timestamp = true
+
+[debug]
+  enable = true
+  host = "0.0.0.0"
+  port = 2345
